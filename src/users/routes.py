@@ -27,4 +27,3 @@ async def upload_image(file : UploadFile = File(...)):
     return {
         "label_counts": label_counts   # misol: {"apple": 4, "banana": 5}
     }
-        
