@@ -2,7 +2,8 @@ version: "3.9"
 
 services:
   api:
-    build: .
+    image : fastapi:latest
+    
     container_name: fastapi
     ports:
       - "8000:8000"
