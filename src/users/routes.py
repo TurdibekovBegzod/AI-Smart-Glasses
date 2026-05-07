@@ -12,7 +12,7 @@ async def upload_image(file : UploadFile = File(...)):
     nparr = np.frombuffer(content, np.uint8)  # bytes → numpy array
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)  # OpenCV bilan o‘qish
     
-    label_counts = await run_model(img)
+    label_counts = run_model(img)
 
     return {
         "label_counts": label_counts   # misol: {"apple": 4, "banana": 5}
